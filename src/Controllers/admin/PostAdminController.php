@@ -6,9 +6,8 @@ use URL;
 use Route,
     Redirect;
 use Foostart\Post\Models\Posts;
-/**
- * Validators
- */
+
+
 use Foostart\Post\Validators\PostAdminValidator;
 
 class PostAdminController extends Controller {
@@ -96,12 +95,12 @@ class PostAdminController extends Controller {
                     $post = $this->obj_post->update_post($input);
 
                     //Message
-                    \Session::flash('message', trans('post::post_admin.message_update_successfully'));
+                    \Session::flash('message', trans('post::post.message_update_successfully'));
                     return Redirect::route("admin_post.edit", ["id" => $post->post_id]);
                 } else {
 
                     //Message
-                    \Session::flash('message', trans('post::post_admin.message_update_unsuccessfully'));
+                    \Session::flash('message', trans('post::post.message_update_unsuccessfully'));
                 }
             } else {
 
@@ -110,12 +109,12 @@ class PostAdminController extends Controller {
                 if (!empty($post)) {
 
                     //Message
-                    \Session::flash('message', trans('post::post_admin.message_add_successfully'));
+                    \Session::flash('message', trans('post::post.message_add_successfully'));
                     return Redirect::route("admin_post.edit", ["id" => $post->post_id]);
                 } else {
 
                     //Message
-                    \Session::flash('message', trans('post::post_admin.message_add_unsuccessfully'));
+                    \Session::flash('message', trans('post::post.message_add_unsuccessfully'));
                 }
             }
         }
@@ -142,7 +141,7 @@ class PostAdminController extends Controller {
 
             if (!empty($post)) {
                   //Message
-                \Session::flash('message', trans('post::post_admin.message_delete_successfully'));
+                \Session::flash('message', trans('post::post.message_delete_successfully'));
 
                 $post->delete();
             }

@@ -2,7 +2,7 @@
 <div class="row margin-bottom-12">
     <div class="col-md-12">
         <a href="{!! URL::route('admin_post_category.edit') !!}" class="btn btn-info pull-right">
-            <i class="fa fa-plus"></i>{{trans('post::post_admin.post_category_add_button')}}
+            <i class="fa fa-plus"></i>{{trans('post::post.post_category_add_button')}}
         </a>
     </div>
 </div>
@@ -13,19 +13,19 @@
     <thead>
         <tr>
             <td style='width:5%'>
-                {{ trans('post::post_admin.order') }}
+                {{ trans('post::post.order') }}
             </td>
 
             <th style='width:10%'>
-                {{ trans('post::post_admin.post_categoty_id') }}
+                {{ trans('post::post.post_categoty_id') }}
             </th>
 
             <th style='width:50%'>
-                {{ trans('post::post_admin.post_categoty_name') }}
+                {{ trans('post::post.post_categoty_name') }}
             </th>
 
             <th style='width:20%'>
-                {{ trans('post::post_admin.operations') }}
+                {{ trans('post::post.operations') }}
             </th>
         </tr>
     </thead>
@@ -74,7 +74,7 @@
     <!-- FIND MESSAGE -->
     <span class="text-warning">
         <h5>
-            {{ trans('post::post_admin.message_find_failed') }}
+            {{ trans('post::post.message_find_failed') }}
         </h5>
     </span>
     <!-- /END FIND MESSAGE -->

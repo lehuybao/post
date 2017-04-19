@@ -31,7 +31,7 @@ $(document).ready(function () {
     $("#abc").click(function () {
         $(".panel-body").slideToggle();
     });
-     
+
 
 
 });
@@ -79,12 +79,12 @@ $(document).ready(function () {
 
                             <!--TITLE-->
                             <div class="form-group">
-                                {!! Form::label('post_name', trans('post::post_admin.post_name_label')) !!}
-                                {!! Form::text('post_name', @$params['post_name'], ['class' => 'form-control', 'placeholder' => trans('post::post_admin.post_name_placeholder')]) !!}
+                                {!! Form::label('post_name', trans('post::post.post_name_label')) !!}
+                                {!! Form::text('post_name', @$params['post_name'], ['class' => 'form-control', 'placeholder' => trans('post::post.post_name_placeholder')]) !!}
                             </div>
                             <!--/END TITLE-->
 
-                            {!! Form::submit(trans('post::post_admin.search').'', ["class" => "btn btn-info pull-right"]) !!}
+                            {!! Form::submit(trans('post::post.search').'', ["class" => "btn btn-info pull-right"]) !!}
                             {!! Form::close() !!}
                         </div>
                     </div>
@@ -98,23 +98,17 @@ $(document).ready(function () {
                     <?php foreach ($posts as $post): ?>
 
                         <div class="col-md-3 col-sm-6 col-xs-12 ">
+                            <div clas="a" style="height: 370px !important;">
+                                <div class="hinh">
+                                    <img src="foostart/images/type-15/1.jpg" alt=""/>
+                                </div>
 
+                                <div class="noidung"style="">
+                                    <b><p>  <a href="#" ><?php echo $post['post_name'] ?></a></p></b>
+                                    <div class="b" style="height: 70px; overflow: hidden;"><span style="word-break: break-all;"> <?php echo $post['post_noidung'] ?>.</span></div>
 
-
-
-
-                            <div class="hinh">
-                                <img src="foostart/images/type-15/1.jpg" alt=""/>
-                            </div>
-
-                            <div class="noidung"style="overflow: hidden;">
-                                <a href="#"><?php echo $post['post_name'] ?></a>
-                                <?php echo $post['post_noidung'] ?>.
-                                <div class="viewmore"style="float:right;">
-                                    <a href="http://fau.com.vn/10-nam-chan-nuoi-viet-nam-phat-trien-va-hoi-nhap.html" style="color:blue;">Xem thêm...</a>
                                 </div>
                             </div>
-
                         </div>
                     <?php endforeach; ?>
 

@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-Admin area: {{ trans('post::post_admin.page_list') }}
+{{ trans('post::post.page_list') }}
 @stop
 
 @section('content')
@@ -13,7 +13,7 @@ Admin area: {{ trans('post::post_admin.page_list') }}
             <div class="panel panel-info">
 
                 <div class="panel-heading">
-                    <h3 class="panel-title bariol-thin"><i class="fa fa-group"></i> {!! $request->all() ? trans('post::post_admin.page_search') : trans('post::post_admin.page_list') !!}</h3>
+                    <h3 class="panel-title bariol-thin"><i class="fa fa-group"></i> {!! $request->all() ? trans('post::post.page_search') : trans('post::post.page_list') !!}</h3>
                 </div>
                 
                 <!--MESSAGE-->

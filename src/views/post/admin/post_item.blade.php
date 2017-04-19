@@ -3,12 +3,11 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <td style='width:5%'>{{ trans('post::post_admin.order') }}</td>
-            <th style='width:10%'>Post ID</th>
-            <th style='width:30%'>Post title</th>
-            <th style='width:30%'>Post NoiDung</th>
+            <th style='width:5%'>{{ trans('post::post.order') }}</th>
+            <th style='width:30%'>Tên bài viết</th>
+            <th style='width:30%'>Mô tả ngắn</th>
 
-            <th style='width:20%'>{{ trans('post::post_admin.operations') }}</th>
+            <th style='width:20%'>{{ trans('post::post.operations') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -22,7 +21,6 @@
                 <?php echo $counter;
                 $counter++ ?>
             </td>
-            <td>{!! $post->post_id !!}</td>
             <td>{!! $post->post_name !!}</td>
             <td>{!! $post->post_noidung !!}</td>
             <td>
@@ -37,7 +35,7 @@
 @else
 <span class="text-warning">
     <h5>
-        {{ trans('post::post_admin.message_find_failed') }}
+        {{ trans('post::post.message_find_failed') }}
     </h5>
 </span>
 @endif

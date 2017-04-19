@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-Admin area: {{ trans('post::post_admin.page_edit') }}
+Admin area: {{ trans('post::post.page_edit') }}
 @stop
 @section('content')
 <div class="row">
@@ -11,7 +11,7 @@ Admin area: {{ trans('post::post_admin.page_edit') }}
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title bariol-thin">
-                        {!! !empty($post->post_category_id) ? '<i class="fa fa-pencil"></i>'.trans('post::post_admin.form_edit') : '<i class="fa fa-users"></i>'.trans('post::post_admin.form_add') !!}
+                        {!! !empty($post->post_category_id) ? '<i class="fa fa-pencil"></i>'.trans('post::post.form_edit') : '<i class="fa fa-users"></i>'.trans('post::post.form_add') !!}
                     </h3>
                 </div>
                 <!-- ERRORS NAME  -->
@@ -37,7 +37,7 @@ Admin area: {{ trans('post::post_admin.page_edit') }}
                     <div class="row">
                         <div class="col-md-12 col-xs-12">
                             <!-- POST CATEGORIES ID -->
-                            <h4>{!! trans('post::post_admin.form_heading') !!}</h4>
+                            <h4>{!! trans('post::post.form_heading') !!}</h4>
                             {!! Form::open(['route'=>['admin_post_category.post', 'id' => @$post->post_category_id],  'files'=>true, 'method' => 'post'])  !!}
                             <!--END POST CATEGORIES ID  -->
 

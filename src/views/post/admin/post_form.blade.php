@@ -1,7 +1,7 @@
 @extends('laravel-authentication-acl::admin.layouts.base-2cols')
 
 @section('title')
-    Admin area: {{ trans('post::post_admin.page_list') }}
+    Admin area: {{ trans('post::post.page_list') }}
 @stop
 
 @section('content')
@@ -19,7 +19,7 @@
            </div>
         </div>
         <div class="col-md-4">
-            @include('post::post.admin.post_search')
+            @include('post::post.post_search')
         </div>
     </div>
 </div>

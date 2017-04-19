@@ -84,12 +84,12 @@ class PostServiceProvider extends ServiceProvider {
                  * Posts
                  */
                 //list
-                trans('post::post_admin.page_list') => [
+                trans('post::post.page_list') => [
                     'url' => URL::route('admin_post'),
                     "icon" => '<i class="fa fa-users"></i>'
                 ],
                 //add
-                trans('post::post_admin.' . $is_action) => [
+                trans('post::post.' . $is_action) => [
                     'url' => URL::route('admin_post.edit'),
                     "icon" => '<i class="fa fa-users"></i>'
                 ],
@@ -97,7 +97,7 @@ class PostServiceProvider extends ServiceProvider {
                  * Categories
                  */
                 //list
-                trans('post::post_admin.page_category_list') => [
+                trans('post::post.page_category_list') => [
                     'url' => URL::route('admin_post_category'),
                     "icon" => '<i class="fa fa-users"></i>'
                 ],
